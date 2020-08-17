@@ -30,15 +30,15 @@
 */
 
 //Code Here
-Class Employee{
-  constructor(first_name, Last_name, email, age){
+class Employee{
+  constructor(first_name,  last_name, email, age){
   this.first_name = first_name;
-  this.Last_name = Last_name;
+  this.last_name = last_name;
   this.email = email;
   this.age = age;
 }
-Employee.prototype.makeWidget = function(){
-  return "${first_name} ${Last_name} Widget"
+makeWidget(){
+  return (`${this.first_name} ${this.last_name} Widget`)
 }
 }
 
@@ -57,8 +57,15 @@ Employee.prototype.makeWidget = function(){
   Call your new class Manager
 */
 
-//Code Here
-
+//code here
+class Manager extends Employee {
+  constructor(reports, hire, fire){
+    super(first_name, last_name, email, age)
+    this.reports = reports;
+    this.hire = hire;
+    this.fire = fire;
+}
+}
 
 ////////// PROBLEM 3 //////////
 
