@@ -94,8 +94,30 @@ let newManager = new Manager
 */
 
 //Code Here
-
-
+class ProgressiveManager extends Manager {
+  constructor(first_name, last_name, email, age){
+    super(first_name, last_name, email, age);
+    this.title = "not a manager";
+    this.bonus = 0;
+    this.reports = [];
+}
+hire() {
+  super.hire()
+  if(this.reports.length === 0){
+  return this.title = "Not a manager";
+} else if(this.reports.length >= 1 && this.reports.length <= 3){
+  return this.title = "Barely Manager";
+} else if(this.reports.length >= 4 && this.reports.length <= 10){
+return this.title = "Mostly Manager";
+} else if(this.reports.length >= 11 && this.reports.length <= 50){
+  return this.title = "Manager";
+} else if(this.reports.length >= 51 && this.reports.length <= 100){
+  return this.title = "Manager Plus";
+} else if(this.reports.length >= 101){
+  return this.title = "Bestest Manager";
+}
+}
+}
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
