@@ -59,14 +59,19 @@ makeWidget(){
 
 //code here
 class Manager extends Employee {
-  constructor(reports, hire, fire){
-    super(first_name, last_name, email, age)
-    this.reports = reports;
-    this.hire = hire;
-    this.fire = fire;
+  constructor(first_name, last_name, email, age){
+    super(first_name, last_name, email, age);
+this.reports = [] 
 }
-}
+    hire(Employee){
+  this.reports.push(Employee)
+    }
+    fire(index){
+      this.reports.splice(index, 1)
+    }
 
+}
+let newManager = new Manager
 ////////// PROBLEM 3 //////////
 
 /*
