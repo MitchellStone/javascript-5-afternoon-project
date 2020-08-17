@@ -30,7 +30,17 @@
 */
 
 //Code Here
-
+Class Employee{
+  constructor(first_name, Last_name, email, age){
+  this.first_name = first_name;
+  this.Last_name = Last_name;
+  this.email = email;
+  this.age = age;
+}
+Employee.prototype.makeWidget = function(){
+  return "${first_name} ${Last_name} Widget"
+}
+}
 
 ////////// PROBLEM 2 //////////
 
