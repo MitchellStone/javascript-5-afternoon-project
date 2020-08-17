@@ -97,7 +97,7 @@ let newManager = new Manager
 class ProgressiveManager extends Manager {
   constructor(first_name, last_name, email, age){
     super(first_name, last_name, email, age);
-    this.title = "not a manager";
+    this.title = "Not a manager";
     this.bonus = 0;
     this.reports = [];
 }
@@ -117,6 +117,11 @@ return this.title = "Mostly Manager";
   return this.title = "Bestest Manager";
 }
 }
+fire() {
+  super.fire()
+  this.bonus += 100
+}
+
 }
 
 ////////// PROBLEM 4 - Black Diamond //////////
